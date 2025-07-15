@@ -1,0 +1,37 @@
+language: "en"
+base_model: "openai/whisper-tiny"
+output_model_dir: "finetuned-whisper-tiny-ast"
+resume_from: # Add a checkpoint path to resume training
+
+batch_size: 16
+eval_batch_size: 8
+gradient_accumulation: 4
+epochs: 2
+save_steps: 6
+eval_steps: 6
+dataloader_num_workers: 16
+augment: true # Whether to perform audio augmentations for a more robust ASR system
+
+train_data:
+    common_voice_16.1:
+        hf_name: "mozilla-foundation/common_voice_16_1"
+        args: ["ast"]
+        kwargs: {"split": "train"}
+        text_field: "sentence"
+
+valid_data:
+    common_voice_16.1:
+        hf_name: "mozilla-foundation/common_voice_16_1"
+        args: ["ast"]
+        kwargs: {"split": "validation"}
+        text_field: "sentence"
+
+test_data:
+    common_voice_16.1:
+        hf_name: "mozilla-foundation/common_voice_16_1"
+        args: ["ast"]
+        kwargs: {"split": "test"}
+        text_field: "sentence"
+
+cache_dir: "" # Path to HuggingFace models cache
+        

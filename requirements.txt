@@ -1,0 +1,8 @@
+transformers[torch]==4.39.2
+evaluate==0.4.5
+librosa==0.11.0
+gruut==2.4.0
+datasets==2.17.0
+jiwer
+accelerate==0.27.0
+tensorboardX==2.6.4
