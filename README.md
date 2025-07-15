@@ -26,7 +26,7 @@ Run the fine-tuning script with your configuration:
 python scripts/finetune.py configs/example_config.yaml
 ```
 
-**How to test a fine-tuned Whisper model**
+## How to test a fine-tuned Whisper model**
 
 Use the test_simpler.py script to run inference with a fine-tuned model:
 
@@ -34,7 +34,7 @@ Use the test_simpler.py script to run inference with a fine-tuned model:
 python scripts/test.py configs/example_config.yaml finetuned-whisper-tiny-ast results_dir --device cuda --batch_size 64
 ```
 
-**How to server your fine-tuned Whisper model**
+## How to serve your fine-tuned Whisper model**
 
 Run the server
 
