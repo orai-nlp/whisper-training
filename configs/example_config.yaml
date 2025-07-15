@@ -1,4 +1,4 @@
-language: "en"
+language: "ar"
 base_model: "openai/whisper-tiny"
 output_model_dir: "finetuned-whisper-tiny-ast"
 resume_from: # Add a checkpoint path to resume training

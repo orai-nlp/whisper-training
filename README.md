@@ -33,3 +33,17 @@ Use the test_simpler.py script to run inference with a fine-tuned model:
 ```bash
 python scripts/test.py configs/example_config.yaml finetuned-whisper-tiny-ast results_dir --device cuda --batch_size 64
 ```
+
+**How to server your fine-tuned Whisper model**
+
+Run the server
+
+```bash
+python scripts/run_server.py language model
+```
+
+Test with the client:
+
+```bash
+python scripts/server_client.py audio.wav
+```
